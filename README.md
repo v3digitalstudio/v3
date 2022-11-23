@@ -2,6 +2,4 @@
 
 # V3 Digital Studio
 
----
-
-Developed with [Next.js](https://nextjs.org/), styled with [styled jsx](https://github.com/vercel/styled-jsx), and deployed using [Vercel](https://vercel.com).
+A modern development and design agency based in the San Francisco Bay Area.
