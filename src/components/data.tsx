@@ -45,7 +45,7 @@ const benefitTwo = {
     },
     {
       title: 'Powered by powered by latest technologies and tools',
-      desc: 'Tools like Next.js, TailwindCSS, and Turborepo.',
+      desc: 'Vercel, Next.js, and JAMstack content management.',
       icon: <AdjustmentsVerticalIcon />,
     },
     {
