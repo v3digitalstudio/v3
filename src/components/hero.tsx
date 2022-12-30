@@ -8,17 +8,17 @@ export default function Hero() {
       <Container className="flex flex-wrap ">
         <div className="flex items-center w-full lg:w-1/2">
           <div className="max-w-2xl mb-8">
-            <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-              We can be your hero, baby.
+            <h1 className="p-6 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:text-3xl lg:leading-tight xl:text-4xl xl:leading-tight dark:text-white">
+              Making web experiences minimal, fast, and exciting.
             </h1>
-            <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
+            <p className="px-6 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
               V3 Digital Studio is a modern development and design agency based
               in the San Francisco Bay Area.
             </p>
 
-            <div className="flex flex-col items-start space-x-3 space-y-3 sm:space-y-0 sm:items-center sm:flex-row">
+            <div className="p-5 flex flex-col items-start space-x-3 space-y-3 sm:space-y-0 sm:items-center sm:flex-row">
               <a
-                href="https://github.com/web3templates"
+                href="https://v3digital.studio"
                 target="_blank"
                 rel="noopener"
                 className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md "
@@ -52,8 +52,8 @@ export default function Hero() {
           <div className="hidden lg:block">
             <Image
               src={heroImg}
-              width="616"
-              height="617"
+              width="400"
+              height="400"
               alt="Hero Illustration"
               loading="eager"
               placeholder="blur"

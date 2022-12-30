@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import ThemeChanger from './DarkSwitch'
 import { Disclosure } from '@headlessui/react'
 
 export default function Navbar() {
@@ -100,8 +99,6 @@ export default function Navbar() {
           >
             Partner with V3
           </Link>
-
-          <ThemeChanger />
         </div>
       </nav>
     </div>
