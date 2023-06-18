@@ -4,7 +4,7 @@
   "description": "V3 Digital Studio is a modern development and design agency based in the San Francisco Bay Area.",
   "repository": {
     "type": "git",
-    "url": "https://gituhb.com/v3digitalstudio/v3"
+    "url": "https://github.com/v3digitalstudio/v3"
   },
   "keywords": [
     "agency",
@@ -15,7 +15,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "next dev",
-    "build": "contentlayer build && next build",
+    "build": "next build",
     "turbo": "next dev --turbo",
     "start": "next start",
     "lint": "next lint",
