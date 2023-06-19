@@ -16,7 +16,7 @@ const fontSans = FontSans({
 
 // Font files can be colocated inside of `pages`
 const fontHeading = localFont({
-  src: '../assets/fonts/ClashDisplay-SemiBold.woff2',
+  src: '../assets/fonts/ClashDisplay-Semibold.woff2',
   variable: '--font-heading',
 })
 
