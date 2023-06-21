@@ -6,7 +6,6 @@ import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 import { Toaster } from '@/components/ui/toaster'
 import { Analytics } from '@/components/analytics'
-import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
 
 const fontSans = FontSans({
@@ -63,11 +62,25 @@ export const metadata = {
     images: [`${siteConfig.url}/og.jpg`],
     creator: '@shadcn',
   },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
-  },
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      url: '/favicon/favicon-32x32.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      url: '/favicon/favicon-16x16.png',
+    },
+    {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      url: '/favicon/apple-touch-icon.png',
+    },
+  ],
   manifest: `${siteConfig.url}/site.webmanifest`,
 }
 
@@ -86,7 +99,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
           <Analytics />
           <Toaster />
-          <TailwindIndicator />
         </ThemeProvider>
       </body>
     </html>

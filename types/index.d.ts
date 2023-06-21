@@ -33,6 +33,6 @@ export type SidebarNavItem = {
     }
 )
 
-export type MarketingConfig = {
+export type HomeConfig = {
   mainNav: MainNavItem[]
 }

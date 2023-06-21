@@ -1,57 +1,36 @@
-import * as React from "react"
+import Link from "next/link"
+import { ModeToggle } from "./mode-toggle"
 
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
-import { ModeToggle } from "@/components/mode-toggle"
-
-export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
+function NavLink({ href, children }) {
   return (
-    <footer className={cn(className)}>
-      <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
-        <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-          <Icons.logo />
-          <p className="text-center text-sm leading-loose md:text-left">
-            Built by{" "}
-            <a
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              shadcn
-            </a>
-            . Hosted on{" "}
-            <a
-              href="https://vercel.com"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Vercel
-            </a>
-            . Illustrations by{" "}
-            <a
-              href="https://popsy.co"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              Popsy
-            </a>
-            . The source code is available on{" "}
-            <a
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              GitHub
-            </a>
-            .
+    <Link
+      href={href}
+      // eslint-disable-next-line
+      className="text-sm text-zinc-800 dark:text-zinc-200  hover:text-teal-500 dark:hover:text-teal-400 font-medium transition"
+    >
+      {children}
+    </Link>
+  )
+}
+
+export function SiteFooter() {
+  return (
+    <footer>
+      <div className="container gap-4 py-10">
+        <div className="border-t-2">
+          <div className="flex flex-col items-center justify-center gap-4 pt-8 md:flex-row">
+            <NavLink href="/features">Features</NavLink>
+            <NavLink href="/pricing">Pricing</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
+            <NavLink href="/docs">Documentation</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
+            <NavLink href="/studio">Studio</NavLink>
+            <ModeToggle />
+          </div>
+          <p className="pt-5 text-center text-sm text-zinc-600 dark:text-zinc-300">
+            V3 Digital Studio &copy; {new Date().getFullYear()}
           </p>
         </div>
-        <ModeToggle />
       </div>
     </footer>
   )
