@@ -18,13 +18,13 @@ export default async function HomeLayout({ children }: HomeLayoutProps) {
           <MainNav items={homeConfig.mainNav} />
           <nav>
             <Link
-              href="/login"
+              href="/contact"
               className={cn(
-                buttonVariants({ variant: "secondary", size: "sm" }),
-                "px-4"
+                buttonVariants({ variant: "amber", size: "sm" }),
+                "mt-2 px-4"
               )}
             >
-              Client Login
+              Start here
             </Link>
           </nav>
         </div>

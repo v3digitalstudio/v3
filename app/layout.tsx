@@ -1,22 +1,23 @@
-import { Inter as FontSans } from 'next/font/google'
-import localFont from 'next/font/local'
+import { Inter as FontSans } from "next/font/google"
+import localFont from "next/font/local"
 
-import '@/styles/globals.css'
-import { siteConfig } from '@/config/site'
-import { cn } from '@/lib/utils'
-import { Toaster } from '@/components/ui/toaster'
-import { Analytics } from '@/components/analytics'
-import { ThemeProvider } from '@/components/theme-provider'
+import "@/styles/globals.css"
+
+import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
+import { Toaster } from "@/components/ui/toaster"
+import { Analytics } from "@/components/analytics"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
+  subsets: ["latin"],
+  variable: "--font-sans",
 })
 
 // Font files can be colocated inside of `pages`
 const fontHeading = localFont({
-  src: '../assets/fonts/ClashDisplay-Semibold.woff2',
-  variable: '--font-heading',
+  src: "../assets/fonts/ClashDisplay-Semibold.woff2",
+  variable: "--font-heading",
 })
 
 interface RootLayoutProps {
@@ -30,55 +31,55 @@ export const metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    'Next.js',
-    'React',
-    'Tailwind CSS',
-    'Server Components',
-    'Radix UI',
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Server Components",
+    "Radix UI",
   ],
   authors: [
     {
-      name: 'v3frankie',
-      url: 'https://v3frankie.me',
+      name: "v3digitalstudio",
+      url: "https://v3digital.studio",
     },
   ],
-  creator: 'v3frankie',
+  creator: "v3digitalstudio",
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
+    type: "website",
+    locale: "en_US",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og.jpg`],
-    creator: '@shadcn',
+    creator: "@v3digitalstudio",
   },
   icons: [
     {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      url: '/favicon/favicon-32x32.png',
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      url: "/favicon/favicon-32x32.png",
     },
     {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      url: '/favicon/favicon-16x16.png',
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      url: "/favicon/favicon-16x16.png",
     },
     {
-      rel: 'apple-touch-icon',
-      sizes: '180x180',
-      url: '/favicon/apple-touch-icon.png',
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      url: "/favicon/apple-touch-icon.png",
     },
   ],
   manifest: `${siteConfig.url}/site.webmanifest`,
@@ -90,7 +91,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased',
+          "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
           fontHeading.variable
         )}

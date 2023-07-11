@@ -1,7 +1,7 @@
 {
   "name": "v3",
   "version": "1.1.0",
-  "description": "V3 Digital Studio is a modern development and design agency based in the San Francisco Bay Area.",
+  "description": "V3 Digital Studio is a modern development and design agency based in the Sierra Nevadas.",
   "repository": {
     "type": "git",
     "url": "https://github.com/v3digitalstudio/v3"
@@ -11,7 +11,7 @@
     "development",
     "design"
   ],
-  "author": "v3frankie",
+  "author": "v3digitalstudio",
   "license": "ISC",
   "scripts": {
     "dev": "next dev",
@@ -98,6 +98,7 @@
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@ianvs/prettier-plugin-sort-imports": "^4.0.2",
+    "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^20.3.1",

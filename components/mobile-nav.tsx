@@ -2,7 +2,7 @@ import * as React from "react"
 import Link from "next/link"
 
 import { MainNavItem } from "types"
-import { siteConfig } from "@/config/site"
+// import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { useLockBody } from "@/hooks/use-lock-body"
 // import { Icons } from "@/components/icons"
@@ -35,7 +35,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
                 width="130.067"
                 height="88.63"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
                 <feFlood flood-opacity="0" result="BackgroundImageFix" />
                 <feColorMatrix

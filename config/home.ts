@@ -3,8 +3,8 @@ import { HomeConfig } from "types"
 export const homeConfig: HomeConfig = {
   mainNav: [
     {
-      title: "Features",
-      href: "/#features",
+      title: "Expertise",
+      href: "/#expertise",
     },
     {
       title: "Pricing",
@@ -15,8 +15,8 @@ export const homeConfig: HomeConfig = {
       href: "/blog",
     },
     {
-      title: "Documentation",
-      href: "/docs",
+      title: "Studio",
+      href: "/studio",
     },
   ],
 }

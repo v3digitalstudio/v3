@@ -1,10 +1,10 @@
 import Link from "next/link"
+import { MountainSnow } from "lucide-react"
 
 // import { env } from '@/env.mjs'
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-
 import {
   AuthIcon,
   HumanSitting,
@@ -19,40 +19,46 @@ export default async function IndexPage() {
   return (
     <>
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
-        <div className="container flex max-w-[64rem] flex-col items-end gap-4 text-start">
+        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-start md:items-end">
           {/* <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-7xl">
             Digital Studio
           </h1> */}
           <HumanSitting />
-          <p className="max-w-[42rem] text-end leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            V3 Digital Studio is a modern development and design <br /> agency
-            based in the San Francisco Bay Area.
+          <p className="max-w-[24rem]  text-center leading-normal text-muted-foreground md:max-w-[30rem] md:text-end lg:max-w-[34rem]">
+            V3 Digital Studio is a modern development and design agency based in
+            the Sierra Nevadas{" "}
+            <MountainSnow className="inline-flex h-6 fill-zinc-300 pb-1.5 dark:fill-zinc-800" />
           </p>
           <div className="space-x-4">
             <Link
-              href="/pricing"
-              className={cn(buttonVariants({ size: "lg" }), "mb-5")}
+              href="/studio"
+              className={cn(
+                buttonVariants({ variant: "dark", size: "lg" }),
+                "mb-5"
+              )}
             >
-              Get Started
+              Learn More
             </Link>
             <Link
               href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
-              className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
+              className={cn(
+                buttonVariants({ variant: "elevated", size: "lg" })
+              )}
             >
-              Contact
+              Follow V3
             </Link>
           </div>
         </div>
       </section>
       <section
-        id="features"
-        className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
+        id="expertise"
+        className="container space-y-16 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
       >
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
-            Features
+            Expertise
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
             Utilizing the latest and greatest for your new web app.
@@ -138,6 +144,15 @@ export default async function IndexPage() {
             We&apos;re a digital powerhouse agency focused on providing our
             clients with the best possible experience on the web. <br />{" "}
           </p>
+          <Link
+            href="/contact"
+            className={cn(
+              buttonVariants({ variant: "elevated", size: "lg" }),
+              "px-6"
+            )}
+          >
+            Let&apos;s begin
+          </Link>
         </div>
       </section>
     </>
