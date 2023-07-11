@@ -40,7 +40,7 @@ export default async function IndexPage() {
               Learn More
             </Link>
             <Link
-              href={siteConfig.links.github}
+              href={siteConfig.links.v3inbio}
               target="_blank"
               rel="noreferrer"
               className={cn(

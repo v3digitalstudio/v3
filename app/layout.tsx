@@ -1,7 +1,7 @@
+import "@/styles/globals.css"
+
 import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
-
-import "@/styles/globals.css"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -63,25 +63,11 @@ export const metadata = {
     images: [`${siteConfig.url}/og.jpg`],
     creator: "@v3digitalstudio",
   },
-  icons: [
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "32x32",
-      url: "/favicon/favicon-32x32.png",
-    },
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "16x16",
-      url: "/favicon/favicon-16x16.png",
-    },
-    {
-      rel: "apple-touch-icon",
-      sizes: "180x180",
-      url: "/favicon/apple-touch-icon.png",
-    },
-  ],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
   manifest: `${siteConfig.url}/site.webmanifest`,
 }
 
