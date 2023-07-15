@@ -24,8 +24,7 @@ export function MainNav({ items, children }: MainNavProps) {
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
         <V3Logo />
-        {/* eslint-disable-next-line */}
-        <span className="text-base font-base hidden font-heading sm:inline-block">
+        <span className="font-base hidden font-heading text-base sm:inline-block">
           Digital Studio
         </span>
       </Link>
