@@ -5,8 +5,9 @@ import localFont from "next/font/local"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "sonner"
 import { Analytics } from "@/components/analytics"
+import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 
 const fontSans = FontSans({
@@ -86,6 +87,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
           <Analytics />
           <Toaster />
+          <TailwindIndicator />
         </ThemeProvider>
       </body>
     </html>

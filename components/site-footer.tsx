@@ -1,39 +1,31 @@
 import Link from "next/link"
-
 import { ModeToggle } from "./mode-toggle"
 
-function NavLink({ href, children }) {
-  return (
-    <Link
-      href={href}
-      // eslint-disable-next-line
-      className="text-sm text-zinc-800 dark:text-zinc-200  hover:text-teal-500 dark:hover:text-teal-400 font-medium transition"
-    >
-      {children}
-    </Link>
-  )
-}
 
 export function SiteFooter() {
   return (
-    <footer>
-      <div className="container gap-4 py-10">
-        <div className="border-t-2">
-          <div className="flex flex-col items-center justify-center gap-4 pt-8 md:flex-row">
-            <NavLink href="/expertise">Expertise</NavLink>
-            <NavLink href="/pricing">Pricing</NavLink>
-            <NavLink href="/blog">Blog</NavLink>
-            {/* <NavLink href="/docs">Documentation</NavLink> */}
-            {/* <NavLink href="/projects">Projects</NavLink> */}
-            <NavLink href="/studio">Studio</NavLink>
-            <ModeToggle />
+    <section className="container">
+      <footer className="m-4 rounded-lg bg-white shadow dark:bg-gray-800">
+          <div className="mx-auto flex w-full flex-col-reverse items-center justify-between p-4 md:flex-row">
+            <span className="mt-1 text-sm text-gray-500 dark:text-gray-400 md:mt-0">© 2023 <Link href="/" className="hover:underline">V3 Digital Studio</Link>. All Rights Reserved.
+          </span>
+          <ul className="flex flex-wrap items-center text-sm font-medium text-gray-500 dark:text-gray-400">
+              <li>
+                  <Link href="/studio" className="mr-4 hover:underline md:mr-6 ">Studio</Link>
+              </li>
+              <li>
+                  <Link href="/privacy-policy" className="mr-4 hover:underline md:mr-6">Privacy Policy</Link>
+              </li>
+              <li>
+                  <Link href="/" className="mr-4 hover:underline md:mr-6">Help</Link>
+              </li>
+              <li>
+                  <Link href="/contact" className="mr-5 hover:underline">Contact</Link>
+              </li>
+              <ModeToggle />
+          </ul>
           </div>
-          <p className="pt-5 text-center text-sm text-zinc-600 dark:text-zinc-300">
-            <span className="font-bold">V3 Digital Studio</span> &copy;
-            {new Date().getFullYear()} <br /> All Rights Reserved
-          </p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </section>
   )
 }
