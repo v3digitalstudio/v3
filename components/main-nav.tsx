@@ -8,8 +8,8 @@ import { MainNavItem } from "types"
 // import { siteConfig } from '@/config/site'
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
+import { Logo } from "@/components/logo"
 import { MobileNav } from "@/components/mobile-nav"
-import { V3Logo } from "./svg"
 
 interface MainNavProps {
   items?: MainNavItem[]
@@ -22,8 +22,8 @@ export function MainNav({ items, children }: MainNavProps) {
 
   return (
     <div className="flex gap-6 md:gap-10">
-      <Link href="/" className="hidden items-center space-x-2 md:flex">
-        <V3Logo />
+      <Link href="/" className="hidden items-center space-x-1 md:flex">
+        <Logo />
         <span className="font-base hidden font-heading text-base sm:inline-block">
           Digital Studio
         </span>

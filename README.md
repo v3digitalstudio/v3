@@ -2,4 +2,4 @@
 
 # V3 Digital Studio
 
-A modern development and design agency based in the Sierra Nevada's.
+A modern development and design agency based in the Sierra Nevadas.

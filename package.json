@@ -1,6 +1,6 @@
 {
   "name": "v3",
-  "version": "1.1.5",
+  "version": "1.2.5",
   "description": "V3 Digital Studio is a modern development and design agency based in the Sierra Nevadas.",
   "repository": {
     "type": "git",
@@ -75,6 +75,7 @@
     "concurrently": "^8.2.0",
     "contentlayer": "^0.3.4",
     "date-fns": "^2.30.0",
+    "framer-motion": "^10.12.22",
     "lucide-react": "^0.259.0",
     "next": "13.4.9",
     "next-auth": "4.22.1",

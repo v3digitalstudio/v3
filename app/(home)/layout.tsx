@@ -3,9 +3,9 @@ import Link from "next/link"
 import { homeConfig } from "@/config/home"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+// import { Banner } from "@/components/banner"
 import { MainNav } from "@/components/main-nav"
 import { SiteFooter } from "@/components/site-footer"
-// import { Banner } from "@/components/banner"
 
 interface HomeLayoutProps {
   children: React.ReactNode
@@ -15,7 +15,7 @@ export default async function HomeLayout({ children }: HomeLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
       {/* <Banner /> */}
-      <header className="container z-40 bg-background">
+      <header className="container z-40">
         <div className="flex h-20 items-center justify-between py-6">
           <MainNav items={homeConfig.mainNav} />
           <nav>
