@@ -11,8 +11,8 @@ export const homeConfig: HomeConfig = {
       href: "/pricing",
     },
     {
-      title: "Blog",
-      href: "/blog",
+      title: "Articles",
+      href: "/articles",
     },
     {
       title: "Studio",

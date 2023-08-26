@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { redirect } from "next/navigation"
 
 // import { authOptions } from "@/lib/auth"
@@ -9,8 +10,9 @@ import { PostCreateButton } from "@/components/post-create-button"
 // import { PostItem } from "@/components/post-item"
 import { DashboardShell } from "@/components/shell"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Dashboard",
+  description: "Client Dashboard for V3 Digital Studio.",
 }
 
 export default async function DashboardPage() {

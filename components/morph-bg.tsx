@@ -1,7 +1,7 @@
 // import Image from "next/image"
 // import { useTheme } from "next-themes"
 
-export function HeroBgImg() {
+export function MorphBg() {
   //   const { resolvedTheme } = useTheme()
   //   let src
 

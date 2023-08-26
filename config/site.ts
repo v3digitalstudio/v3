@@ -7,7 +7,6 @@ export const siteConfig: SiteConfig = {
   url: "https://v3digital.studio",
   ogImage: "https://v3digital.studio/og.jpg",
   links: {
-    v3inbio: "https://links.v3digital.studio",
     twitter: "https://twitter.com/v3digitalstudio",
     github: "https://github.com/v3digitalstudio",
   },

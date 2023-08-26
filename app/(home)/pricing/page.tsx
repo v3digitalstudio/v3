@@ -1,11 +1,20 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { buttonVariants } from "@/components/ui/button"
+import { CalEmbed } from "@/components/cal-embed"
 import { Icons } from "@/components/icons"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Pricing",
+  description: "Pricing page for V3 Digital Studio.",
 }
 
 export default function PricingPage() {
@@ -31,41 +40,45 @@ export default function PricingPage() {
             </li>
 
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> Custom design and custom
+              <Icons.check className="mr-2 h-4 w-4" /> Custom design and
               development
             </li>
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> Simple Analytics
+              <Icons.check className="mr-2 h-4 w-4" /> Umami Analytics
             </li>
             <li className="flex items-center">
               <Icons.check className="mr-2 h-4 w-4" /> 5 day availability
             </li>
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> Unlimited Support
+              <Icons.check className="mr-2 h-4 w-4" /> 24/7 Uptime Monitoring
+            </li>
+            <li className="flex items-center">
+              <Icons.check className="mr-2 h-4 w-4" /> Change detection
+              Monitoring
             </li>
           </ul>
         </div>
         <div className="flex flex-col gap-10 text-center">
           <div>
-            <h4 className="text-5xl font-bold tracking-tighter">$6000</h4>
+            <h4 className="text-5xl font-bold tracking-tighter">$5999</h4>
             <p className="text-end text-sm font-bold text-muted-foreground">
               per month
             </p>
           </div>
-          <Link
-            href="/contact"
+          <a
+            href="https://buy.stripe.com/00gaGB5WD86448g3cd"
             className={cn(buttonVariants({ variant: "elevated", size: "lg" }))}
           >
             Get Started
-          </Link>
+          </a>
         </div>
       </div>
-      <div className="grid w-full items-start gap-10 rounded-lg border-8 p-10 md:grid-cols-[1fr_200px]">
+      <div className="grid w-full items-start gap-10 rounded-lg border-4 p-10 md:grid-cols-[1fr_200px]">
         <div className="grid gap-6">
           <h3 className="text-xl font-bold sm:text-2xl">
-            Pro{" "}
-            <span className="pl-1 text-sm uppercase text-red-400">
-              ... Most Popular!
+            Pro <Icons.arrowRight className="inline-block h-6 w-6 py-1" />{" "}
+            <span className="rounded-xl border bg-red-200 p-2.5 text-sm uppercase text-red-400 dark:text-red-600">
+              Popular
             </span>
           </h3>
           <ul className="text-md grid gap-3 text-muted-foreground sm:grid-cols-2">
@@ -77,30 +90,33 @@ export default function PricingPage() {
             </li>
 
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> Custom design and custom
+              <Icons.check className="mr-2 h-4 w-4" /> Custom design and
               development
             </li>
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> Personal Dashboard
-              Analytics
+              <Icons.check className="mr-2 h-4 w-4" /> Simple Analytics
             </li>
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> 15 day availability
+              <Icons.check className="mr-2 h-4 w-4" /> 10 day availability
             </li>
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> Unlimited Support
+              <Icons.check className="mr-2 h-4 w-4" /> 24/7 Uptime Monitoring
+            </li>
+            <li className="flex items-center">
+              <Icons.check className="mr-2 h-4 w-4" /> Change detection
+              Monitoring
             </li>
           </ul>
         </div>
         <div className="flex flex-col gap-10 text-center">
           <div>
-            <h4 className="text-5xl font-bold tracking-tighter">$16,000</h4>
+            <h4 className="text-5xl font-bold tracking-tighter">$12,999</h4>
             <p className="text-end text-sm font-bold text-muted-foreground">
               per month
             </p>
           </div>
-          <Link
-            href="/contact"
+          <a
+            href="https://buy.stripe.com/9AQaGBfxd7206go8ww"
             className={cn(
               buttonVariants({ variant: "dark", size: "lg" }),
               "border-2",
@@ -108,7 +124,7 @@ export default function PricingPage() {
             )}
           >
             Get Started
-          </Link>
+          </a>
         </div>
       </div>
       {/* <div className="grid w-full items-start gap-10 rounded-lg border p-10 md:grid-cols-[1fr_200px]">
@@ -123,8 +139,7 @@ export default function PricingPage() {
             </li>
 
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> Custom design and custom
-              development
+              <Icons.check className="mr-2 h-4 w-4" /> Custom design and development
             </li>
             <li className="flex items-center">
               <Icons.check className="mr-2 h-4 w-4" /> Dashboard Analytics
@@ -164,17 +179,21 @@ export default function PricingPage() {
             </li>
 
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> Custom design and custom
+              <Icons.check className="mr-2 h-4 w-4" /> Custom design and
               development
             </li>
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> Premium Analytics
+              <Icons.check className="mr-2 h-4 w-4" /> Metabase Suite
             </li>
             <li className="flex items-center">
               <Icons.check className="mr-2 h-4 w-4" /> 15+ day availability
             </li>
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> Unlimited Support
+              <Icons.check className="mr-2 h-4 w-4" /> 24/7 Uptime Monitoring
+            </li>
+            <li className="flex items-center">
+              <Icons.check className="mr-2 h-4 w-4" /> Change detection
+              Monitoring
             </li>
           </ul>
         </div>
@@ -192,7 +211,7 @@ export default function PricingPage() {
       </div>
       <section
         id="framer"
-        className="container rounded-lg bg-indigo-400 py-8 shadow-xl dark:border-2 dark:bg-inherit md:py-12"
+        className="container rounded-lg border bg-indigo-400 py-8 shadow-xl dark:bg-inherit md:py-12"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6">
           <span className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium">
@@ -203,7 +222,7 @@ export default function PricingPage() {
           </h2>
 
           <span className="text-2xl font-bold leading-[1.1] text-white dark:text-gray-400 sm:text-2xl md:text-3xl">
-            $1499
+            $2099
           </span>
           <p className="text-start text-white">
             Get a great site faster with Framer. Ideal for small sites, blogs,
@@ -213,7 +232,7 @@ export default function PricingPage() {
       </section>
       <section
         id="super"
-        className="container rounded-lg bg-amber-500 py-8 shadow-xl dark:border-2 dark:bg-inherit md:py-12"
+        className="container rounded-lg border bg-amber-500 py-8 shadow-xl dark:bg-inherit md:py-12"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6">
           <span className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium">
@@ -223,7 +242,7 @@ export default function PricingPage() {
             Super.so site
           </h2>
           <span className="text-2xl font-bold leading-[1.1] text-white dark:text-gray-400 sm:text-2xl md:text-3xl">
-            $999
+            $1499
           </span>
           <p className="text-start text-white">
             Using Notion? Manage your site with your own workspace. Thats where
@@ -232,7 +251,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <div className="mx-auto flex w-full justify-center gap-4">
+      {/* <div className="mx-auto flex w-full justify-center gap-4">
         <p className="max-w-[85%] leading-normal text-muted-foreground sm:leading-7">
           V3 contributes <strong>1% of your subscription</strong> to remove C0
           <sub>2</sub> from the atmosphere using{" "}
@@ -246,12 +265,49 @@ export default function PricingPage() {
           </a>
           .
         </p>
+      </div> */}
+
+      <div className="mx-auto mt-10 flex w-full justify-center gap-4 md:mt-24">
+        <h2 className="text-center font-heading text-3xl">
+          Frequently Asked Questions
+        </h2>
       </div>
-      <div className="mx-auto mt-10 flex w-full justify-center gap-4 md:mt-36">
-        <h2 className="font-heading text-3xl">Have more questions?</h2>
+      <div className="rounded-lg p-10">
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
-      <div className="mx-auto flex w-full justify-center rounded-lg border p-10">
-        <span>Book a call</span>
+
+      <div className="mx-auto mt-10 flex w-full justify-center gap-4 md:mt-24">
+        <h2 className="text-center font-heading text-3xl">
+          Anything we missed?
+        </h2>
+      </div>
+      <div className="mx-auto flex w-full justify-center rounded-lg bg-gray-200 p-10 dark:bg-inherit">
+        <CalEmbed />
       </div>
     </section>
   )

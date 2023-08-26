@@ -8,7 +8,6 @@ export type SiteConfig = {
   url: string
   ogImage: string
   links: {
-    v3inbio: string
     twitter: string
     github: string
   }

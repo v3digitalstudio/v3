@@ -1,104 +1,66 @@
-import { cn } from "@/lib/utils"
-import { Button, buttonVariants } from "@/components/ui/button"
+import type { Metadata } from "next"
+
+// import Link from "next/link"
+
+import { ContactForm } from "@/components/contact-form"
+
+// import { Chat } from "@/components/svg"
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Contact Page for V3 Digital Studio.",
+}
 
 export default function Contact() {
   return (
-    <div className="flex justify-center p-12">
-      <div className="mt-8 max-w-md">
-        <h2 className="mb-8 font-heading text-3xl">
-          Starting or updating a project? <br /> Please share below a few
-          details and we&apos;ll get back to you.
-        </h2>
-        <h3 className="mb-4 mt-6 text-xl font-semibold text-gray-900 underline decoration-indigo-500 decoration-double dark:text-white">Contact Info</h3>
-        <div className="grid grid-cols-1 gap-4">
-          <label className="block">
-            <span className="text-gray-700 dark:text-muted-foreground">Full name</span>
-            <input
-              type="text"
-              className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm  focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
-              placeholder=""
-            />
-          </label>
-          <label className="block">
-            <span className="text-gray-700 dark:text-muted-foreground">Company</span>
-            <input
-              type="text"
-              className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm  focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
-              placeholder=""
-            />
-          </label>
-          <label className="block">
-            <span className="text-gray-700 dark:text-muted-foreground">Email address</span>
-            <input
-              type="email"
-              className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm  focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
-              placeholder="john@example.com"
-            />
-          </label>
-          <h3 className="mt-4 text-xl font-semibold text-gray-900 underline decoration-indigo-500 decoration-double dark:text-white">Project Info</h3>
-          <label className="block">
-            <span className="text-gray-700 dark:text-muted-foreground">Target launch date?</span>
-            <input
-              type="date"
-              className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
-            />
-          </label>
-          <label className="block">
-            <span className="text-gray-700 dark:text-muted-foreground">What type of work?</span>
-            <select name="selectedProject" className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit">
-              <option>Development</option>
-              <option>Design + Development</option>
-              <option>Self hosted</option>
-              <option>No code</option>
-              <option>Documentation</option>
-              <option>Content Management</option>
-              <option>Other</option>
-            </select>
-          </label>
-          <label className="block">
-            <span className="text-gray-700 dark:text-muted-foreground">Budget range</span>
-            <select name="selectedBudget" defaultValue="3" className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit">
-              <option value="1">$5,000-$8,000</option>
-              <option value="2">$8,000-$15,000</option>
-              <option value="3">$15,000-$30,000</option>
-              <option value="4">$30,000-$45,000</option>
-              <option value="5">$45,000-$65,000</option>
-              <option value="6">$85,000+</option>
-            </select>
-          </label>
-          <label className="block">
-            <span className="text-gray-700 dark:text-white">Additional details</span>
-            <textarea
-              className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm  focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
-              rows={3}
-            />
-          </label>
-          <div className="block">
-            <div className="mt-1">
-              <div>
-                <label className="inline-flex items-center">
-                  <input
-                    type="checkbox"
-                    className="mr-2 rounded border-gray-300 shadow-sm  focus:border-indigo-300 focus:ring focus:ring-indigo-200"
-                    checked={false}
-                  />
-                  <span className="">Email me news and special offers</span>
-                </label>
-              </div>
-              <div>
-                <Button
-                  className={cn(
-                    buttonVariants({ variant: "default", size: "sm" }),
-                    "mt-8 px-4"
-                  )}
-                >
-                  Submit
-                </Button>
-              </div>
+    <div className="my-12 flex justify-center md:my-24">
+      <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-8 rounded-lg bg-gray-100 px-8 py-16 shadow dark:bg-inherit md:grid-cols-2 md:px-12 lg:px-16 xl:px-32">
+        <div className="flex flex-col justify-between">
+          <div>
+            <h2 className="font-heading text-4xl leading-tight lg:text-5xl">
+              Lets talk about everything!
+            </h2>
+            <div className="mt-2 text-gray-700 dark:text-muted-foreground md:mt-8">
+              Hate forms? Send us an{" "}
+              <a className="underline" href="mailto:contact@v3digital.studio">
+                email
+              </a>{" "}
+              instead.
+            </div>
+          </div>
+          <div className="mt-2 text-center md:mt-8">{/* <Chat /> */}</div>
+        </div>
+        <div>
+          <ContactForm />
+        </div>
+      </div>
+      {/* <div className="relative py-3 sm:mx-auto sm:max-w-xl">
+        <div className="absolute inset-0 -skew-y-1 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg sm:-rotate-2 sm:skew-y-0 sm:rounded-3xl"></div>
+        <div className="relative bg-white px-4 py-10 shadow-lg dark:bg-[#030711] sm:rounded-3xl sm:p-20">
+          <div className="mx-auto max-w-md">
+            <h1 className="mb-8 font-heading text-3xl">
+              Starting or updating a project? <br /> Please share below a few
+              details and we&apos;ll get back to you.
+            </h1>
+            <h2 className="mb-4 mt-6 text-xl font-semibold text-gray-900 underline decoration-indigo-500 decoration-double dark:text-white">
+              Contact Info
+            </h2>
+            <div className="grid grid-cols-1 gap-4">
+              <ContactForm />
+            </div>
+            <div className="mt-24 bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-center text-xs text-transparent">
+              By submitting this form I confirm that I have read and accept the{" "}
+              <Link
+                href="/cookie-policy#privacy"
+                className="text-indigo-400 hover:underline"
+              >
+                Privacy Policy
+              </Link>
+              .
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

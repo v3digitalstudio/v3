@@ -2,10 +2,11 @@ import "@/styles/globals.css"
 
 import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
+import Script from "next/script"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Toaster } from "sonner"
+import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -90,6 +91,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <TailwindIndicator />
         </ThemeProvider>
       </body>
+      <Script
+        async
+        src="https://analytics.v3digital.studio/script.js"
+        data-website-id="40d02731-5f90-4939-8a7a-8e622318d9ba"
+      />
     </html>
   )
 }

@@ -20,11 +20,16 @@ export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment()
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
 
+  const handleShowMobileMenu = React.useCallback(
+    () => setShowMobileMenu((showMobileMenu) => !showMobileMenu),
+    []
+  )
+
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-1 md:flex">
         <Logo />
-        <span className="font-base hidden font-heading text-base sm:inline-block">
+        <span className="font-base hidden font-heading text-lg tracking-wide sm:inline-block">
           Digital Studio
         </span>
       </Link>
@@ -35,7 +40,7 @@ export function MainNav({ items, children }: MainNavProps) {
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
+                "text-md flex items-center font-medium transition-colors hover:text-foreground/80",
                 item.href.startsWith(`/${segment}`)
                   ? "text-foreground"
                   : "text-foreground/60",
@@ -54,8 +59,11 @@ export function MainNav({ items, children }: MainNavProps) {
         {showMobileMenu ? <Icons.close /> : <Icons.hamburger />}
         <span className="font-bold">Menu</span>
       </button>
+
       {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
+        <MobileNav items={items} toggleShowMobileMenu={handleShowMobileMenu}>
+          {children}
+        </MobileNav>
       )}
     </div>
   )

@@ -4,14 +4,14 @@ import { Icons } from "@/components/icons"
 
 export function Newsletter() {
   return (
-    <div className="relative isolate overflow-hidden rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-amber-400 py-16 lg:py-32">
+    <div className="relative isolate overflow-hidden bg-gradient-to-r from-amber-600 via-amber-500 to-amber-400 py-16 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="mt-8 max-w-xl lg:max-w-lg">
-            <h2 className="font-heading text-3xl tracking-tight text-white sm:text-4xl">
+            <h2 className="font-heading text-3xl tracking-tight text-white">
               Keep up to date with V3
             </h2>
-            <p className="mt-4 text-lg leading-8 text-white md:hidden">
+            <p className="mt-4 text-base leading-5 text-white md:hidden">
               Never spam. Only our most significant news, delivered every now
               and then.
             </p>
@@ -25,13 +25,14 @@ export function Newsletter() {
                 type="email"
                 autoComplete="email"
                 required
-                className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-zinc-200 sm:text-sm sm:leading-6"
+                className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-2.5 py-2 text-sm text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-zinc-200 md:text-base"
                 placeholder="Enter your email"
               />
               <button
                 type="submit"
                 className={cn(
-                  buttonVariants({ variant: "default", size: "lg" })
+                  buttonVariants({ variant: "default", size: "lg" }),
+                  "px-6"
                 )}
               >
                 Subscribe

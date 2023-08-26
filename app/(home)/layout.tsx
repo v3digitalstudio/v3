@@ -22,8 +22,8 @@ export default async function HomeLayout({ children }: HomeLayoutProps) {
             <Link
               href="/contact"
               className={cn(
-                buttonVariants({ variant: "amberGlow", size: "sm" }),
-                "mt-2 px-4"
+                buttonVariants({ variant: "amberGlowWobble", size: "sm" }),
+                "mt-2 px-3 text-xs md:mt-3 md:h-11 md:px-6 md:text-base"
               )}
             >
               Contact V3
