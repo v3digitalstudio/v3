@@ -7,7 +7,7 @@ import { useSelectedLayoutSegment } from "next/navigation"
 import { MainNavItem } from "types"
 // import { siteConfig } from '@/config/site'
 import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
+import Icons from "@/components/icons"
 import { Logo } from "@/components/logo"
 import { MobileNav } from "@/components/mobile-nav"
 
@@ -56,7 +56,7 @@ export function MainNav({ items, children }: MainNavProps) {
         className="flex items-center space-x-2 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
-        {showMobileMenu ? <Icons.close /> : <Icons.hamburger />}
+        {showMobileMenu ? <Icons name="x" /> : <Icons name="align-justify" />}
         <span className="font-bold">Menu</span>
       </button>
 

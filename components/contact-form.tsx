@@ -24,7 +24,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { toast } from "@/components/ui/use-toast"
-import { Icons } from "@/components/icons"
+import Icons from "@/components/icons"
 
 const FormSchema = z.object({
   name: z.any({
@@ -233,7 +233,10 @@ export function ContactForm() {
                           Select a date
                         </span>
                       )}
-                      <Icons.calendar className="ml-auto h-5 w-5 text-gray-500" />
+                      <Icons
+                        name="calendar"
+                        className="ml-auto h-5 w-5 text-gray-500"
+                      />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
@@ -385,7 +388,9 @@ export function ContactForm() {
           type="submit"
           disabled={isSaving}
         >
-          {isSaving && <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />}
+          {isSaving && (
+            <Icons name="loader" className="mr-2 h-4 w-4 animate-spin" />
+          )}
           <span>Submit</span>
         </Button>
       </form>
