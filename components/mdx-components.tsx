@@ -147,6 +147,7 @@ const components = {
       {...props}
     />
   ),
+  // eslint-disable-next-line
   Image: (props: ImageProps) => <Image {...props} />,
   Callout,
   Card: MdxCard,
