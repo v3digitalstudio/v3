@@ -10,7 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import Icons from "@/components/icons"
+import { Icons } from "@/components/icons"
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
@@ -23,28 +23,22 @@ export function ModeToggle() {
           size="sm"
           className="ml-5 h-6 w-6 px-0 md:ml-0 md:mt-0"
         >
-          <Icons
-            name="sun"
-            className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
-          />
-          <Icons
-            name="moon"
-            className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
-          />
+          <Icons.sun className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Icons.moon className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          <Icons name="sun" className="mr-2 h-4 w-4" />
+          <Icons.sun className="mr-2 h-4 w-4" />
           <span>Light</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Icons name="moon" className="mr-2 h-4 w-4" />
+          <Icons.moon name="moon" className="mr-2 h-4 w-4" />
           <span>Dark</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          <Icons name="laptop" className="mr-2 h-4 w-4" />
+          <Icons.laptop className="mr-2 h-4 w-4" />
           <span>System</span>
         </DropdownMenuItem>
       </DropdownMenuContent>

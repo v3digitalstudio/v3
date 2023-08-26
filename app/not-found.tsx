@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import Icons from "@/components/icons"
+import { Icons } from "@/components/icons"
 
 export default function notFound() {
   return (
@@ -27,7 +27,7 @@ export default function notFound() {
             >
               Contact support{" "}
               <span aria-hidden="true">
-                <Icons name="arrow-right" className="inline-block h-4" />
+                <Icons.arrowRight className="inline-block h-4" />
               </span>
             </Link>
           </div>

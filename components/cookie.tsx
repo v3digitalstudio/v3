@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import Icons from "@/components/icons"
+import { Icons } from "@/components/icons"
 
 export function CookieConsent() {
   return (
@@ -11,10 +11,7 @@ export function CookieConsent() {
         <div>
           <div className="cursor-auto rounded-lg bg-white p-6 shadow-md dark:bg-gray-900">
             <div className="relative mx-auto mb-3">
-              <Icons
-                name="cookie"
-                className="h-7 w-7 dark:fill-black md:h-10 md:w-10"
-              />
+              <Icons.cookie className="h-7 w-7 dark:fill-black md:h-10 md:w-10" />
             </div>
             <span className="mb-3 block w-full text-sm leading-normal text-gray-800 dark:text-white">
               We use functional cookies to make the website work properly and

@@ -1,4 +1,4 @@
-import Icons from "@/components/icons"
+import { Icons } from "@/components/icons"
 
 const includedFeatures = [
   "Private forum access",
@@ -42,8 +42,7 @@ export default function Pricing() {
             >
               {includedFeatures.map((feature) => (
                 <li key={feature} className="flex gap-x-3">
-                  <Icons
-                    name="check"
+                  <Icons.check
                     className="h-6 w-5 flex-none text-indigo-600"
                     aria-hidden="true"
                   />

@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/accordion"
 import { buttonVariants } from "@/components/ui/button"
 import { CalEmbed } from "@/components/cal-embed"
-import Icons from "@/components/icons"
+import { Icons } from "@/components/icons"
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -33,30 +33,27 @@ export default function PricingPage() {
           <h3 className="text-xl font-bold sm:text-2xl">Starter</h3>
           <ul className="text-md grid gap-3 text-muted-foreground sm:grid-cols-2">
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> 1-2 Requests at a
-              time
+              <Icons.check className="mr-2 h-4 w-4" /> 1-2 Requests at a time
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Queued Feature
-              Requests
+              <Icons.check className="mr-2 h-4 w-4" /> Queued Feature Requests
             </li>
 
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Custom design and
+              <Icons.check className="mr-2 h-4 w-4" /> Custom design and
               development
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Umami Analytics
+              <Icons.check className="mr-2 h-4 w-4" /> Umami Analytics
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> 5 day availability
+              <Icons.check className="mr-2 h-4 w-4" /> 5 day availability
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> 24/7 Uptime
-              Monitoring
+              <Icons.check className="mr-2 h-4 w-4" /> 24/7 Uptime Monitoring
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Change detection
+              <Icons.check className="mr-2 h-4 w-4" /> Change detection
               Monitoring
             </li>
           </ul>
@@ -79,39 +76,34 @@ export default function PricingPage() {
       <div className="grid w-full items-start gap-10 rounded-lg border-4 p-10 md:grid-cols-[1fr_200px]">
         <div className="grid gap-6">
           <h3 className="text-xl font-bold sm:text-2xl">
-            Pro{" "}
-            <Icons name="arrow-right" className="inline-block h-6 w-6 py-1" />{" "}
+            Pro <Icons.arrowRight className="inline-block h-6 w-6 py-1" />{" "}
             <span className="rounded-xl border bg-red-200 p-2.5 text-sm uppercase text-red-400 dark:text-red-600">
               Popular
             </span>
           </h3>
           <ul className="text-md grid gap-3 text-muted-foreground sm:grid-cols-2">
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> 2-3 Requests at a
-              time
+              <Icons.check className="mr-2 h-4 w-4" /> 2-3 Requests at a time
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Priority Feature
-              Requests
+              <Icons.check className="mr-2 h-4 w-4" /> Priority Feature Requests
             </li>
 
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Custom design and
+              <Icons.check className="mr-2 h-4 w-4" /> Custom design and
               development
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Simple Analytics
+              <Icons.check className="mr-2 h-4 w-4" /> Simple Analytics
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> 10 day
-              availability
+              <Icons.check className="mr-2 h-4 w-4" /> 10 day availability
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> 24/7 Uptime
-              Monitoring
+              <Icons.check className="mr-2 h-4 w-4" /> 24/7 Uptime Monitoring
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Change detection
+              <Icons.check className="mr-2 h-4 w-4" /> Change detection
               Monitoring
             </li>
           </ul>
@@ -180,30 +172,27 @@ export default function PricingPage() {
           <h3 className="text-xl font-bold sm:text-2xl">Enterprise</h3>
           <ul className="text-md grid gap-3 text-muted-foreground sm:grid-cols-2">
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Unlimited Requests
+              <Icons.check className="mr-2 h-4 w-4" /> Unlimited Requests
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Up Next Feature
-              Queue
+              <Icons.check className="mr-2 h-4 w-4" /> Up Next Feature Queue
             </li>
 
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Custom design and
+              <Icons.check className="mr-2 h-4 w-4" /> Custom design and
               development
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Metabase Suite
+              <Icons.check className="mr-2 h-4 w-4" /> Metabase Suite
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> 15+ day
-              availability
+              <Icons.check className="mr-2 h-4 w-4" /> 15+ day availability
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> 24/7 Uptime
-              Monitoring
+              <Icons.check className="mr-2 h-4 w-4" /> 24/7 Uptime Monitoring
             </li>
             <li className="flex items-center">
-              <Icons name="check" className="mr-2 h-4 w-4" /> Change detection
+              <Icons.check className="mr-2 h-4 w-4" /> Change detection
               Monitoring
             </li>
           </ul>

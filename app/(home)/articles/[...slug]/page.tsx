@@ -12,7 +12,7 @@ import Link from "next/link"
 // import { env } from "@/env.mjs"
 import { cn, formatDate } from "@/lib/utils" // add absoluteUrl for OG image
 import { buttonVariants } from "@/components/ui/button"
-import Icons from "@/components/icons"
+import { Icons } from "@/components/icons"
 
 interface PostPageProps {
   params: {
@@ -104,7 +104,7 @@ export default async function PostPage({ params }: PostPageProps) {
           "absolute left-[-200px] top-14 hidden xl:inline-flex"
         )}
       >
-        <Icons name="chevron-left" className="mr-2 h-4 w-4" />
+        <Icons.chevronLeft className="mr-2 h-4 w-4" />
         See all posts
       </Link>
       <div>
@@ -164,7 +164,7 @@ export default async function PostPage({ params }: PostPageProps) {
           href="/articles"
           className={cn(buttonVariants({ variant: "ghost" }))}
         >
-          <Icons name="chevron-left" className="mr-2 h-4 w-4" />
+          <Icons.chevronLeft className="mr-2 h-4 w-4" />
           See all posts
         </Link>
       </div>

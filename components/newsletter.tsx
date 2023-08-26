@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import Icons from "@/components/icons"
+import { Icons } from "@/components/icons"
 
 export function Newsletter() {
   return (
@@ -42,8 +42,7 @@ export function Newsletter() {
           <dl className="hidden gap-x-8 gap-y-10 md:grid md:grid-cols-2 lg:pt-2">
             <div className="flex flex-col items-start">
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                <Icons
-                  name="calendar"
+                <Icons.calendar
                   className="h-6 w-6 text-white"
                   aria-hidden="true"
                 />
@@ -58,8 +57,7 @@ export function Newsletter() {
             </div>
             <div className="flex flex-col items-start">
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                <Icons
-                  name="megaphone"
+                <Icons.megaphone
                   className="h-6 w-6 text-white"
                   aria-hidden="true"
                 />

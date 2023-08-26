@@ -4,7 +4,7 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 // import { AnimatedGradientBorderTW } from "@/components/animated-border"
-import Icons from "@/components/icons"
+import { Icons } from "@/components/icons"
 import { MorphBg } from "@/components/morph-bg"
 import { Newsletter } from "@/components/newsletter"
 import { HumanSitting } from "@/components/svg"
@@ -30,10 +30,7 @@ export default async function IndexPage() {
           <p className="max-w-[26rem] text-center md:max-w-[30rem] md:text-end lg:max-w-[34rem] lg:text-lg">
             V3 Digital Studio is a modern web development and design agency
             based in the Sierra Nevadas
-            <Icons
-              name="mountain"
-              className="inline-flex h-6 fill-zinc-300 pb-1.5 pl-1 dark:fill-zinc-800"
-            />
+            <Icons.mountain className="inline-flex h-6 fill-zinc-300 pb-1.5 pl-1 dark:fill-zinc-800" />
           </p>
           <div className="flex flex-col md:flex-row">
             <Link
@@ -73,7 +70,7 @@ export default async function IndexPage() {
         <div className="mx-auto grid justify-center gap-4  sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
           <div className="relative overflow-hidden rounded-lg border bg-background p-2">
             <div className="flex h-[190px] flex-col justify-between rounded-md p-6">
-              <Icons name="keyboard" className="h-7 w-7 md:h-12 md:w-12" />
+              <Icons.keyboard className="h-7 w-7 md:h-12 md:w-12" />
               <div className="space-y-1">
                 <h3 className="font-bold">Modern Apps</h3>
                 <p className="text-sm text-muted-foreground">
@@ -85,7 +82,7 @@ export default async function IndexPage() {
           </div>
           <div className="relative overflow-hidden rounded-lg border bg-background p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-              <Icons name="folder" className="h-7 w-7 md:h-12 md:w-12" />
+              <Icons.folder className="h-7 w-7 md:h-12 md:w-12" />
               <div className="space-y-1">
                 <h3 className="font-bold">Security built in</h3>
                 <p className="text-sm text-muted-foreground">
@@ -97,7 +94,7 @@ export default async function IndexPage() {
           </div>
           <div className="relative overflow-hidden rounded-lg border bg-background p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-              <Icons name="monitor-check" className="h-7 w-7 md:h-12 md:w-12" />
+              <Icons.monitorCheck className="h-7 w-7 md:h-12 md:w-12" />
               <div className="space-y-1">
                 <h3 className="font-bold">Self hosting</h3>
                 <p className="text-sm text-muted-foreground">
@@ -109,7 +106,7 @@ export default async function IndexPage() {
           </div>
           <div className="relative overflow-hidden rounded-lg border bg-background p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-              <Icons name="hard-drive" className="h-7 w-7 md:h-12 md:w-12" />
+              <Icons.hardDrive className="h-7 w-7 md:h-12 md:w-12" />
               <div className="space-y-1">
                 <h3 className="font-bold">Small footprint</h3>
                 <p className="text-sm text-muted-foreground">
@@ -137,7 +134,7 @@ export default async function IndexPage() {
           <div className="mx-auto grid justify-center gap-4  sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
             <div className="relative overflow-hidden rounded-lg border bg-background p-2">
               <div className="flex h-[190px] flex-col justify-between rounded-md p-5">
-                <Icons name="keyboard" className="h-7 w-7 md:h-12 md:w-12" />
+                <Icons.keyboard className="h-7 w-7 md:h-12 md:w-12" />
                 <div className="space-y-1">
                   <h3 className="font-bold">Modern Apps</h3>
                   <p className="text-sm text-muted-foreground">
@@ -149,7 +146,7 @@ export default async function IndexPage() {
             </div>
             <div className="relative overflow-hidden rounded-lg border bg-background p-2">
               <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-                <Icons name="folder" className="h-7 w-7 md:h-12 md:w-12" />
+                <Icons.folder className="h-7 w-7 md:h-12 md:w-12" />
                 <div className="space-y-1">
                   <h3 className="font-bold">Security built in</h3>
                   <p className="text-sm text-muted-foreground">
@@ -161,10 +158,7 @@ export default async function IndexPage() {
             </div>
             <div className="relative overflow-hidden rounded-lg border bg-background p-2">
               <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-                <Icons
-                  name="monitor-check"
-                  className="h-7 w-7 md:h-12 md:w-12"
-                />
+                <Icons.monitorCheck className="h-7 w-7 md:h-12 md:w-12" />
                 <div className="space-y-1">
                   <h3 className="font-bold">Self hosting</h3>
                   <p className="text-sm text-muted-foreground">
@@ -176,7 +170,7 @@ export default async function IndexPage() {
             </div>
             <div className="relative overflow-hidden rounded-lg border bg-background p-2">
               <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-                <Icons name="hard-drive" className="h-7 w-7 md:h-12 md:w-12" />
+                <Icons.hardDrive className="h-7 w-7 md:h-12 md:w-12" />
                 <div className="space-y-1">
                   <h3 className="font-bold">Small footprint</h3>
                   <p className="text-sm text-muted-foreground">

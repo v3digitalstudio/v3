@@ -1,4 +1,4 @@
-import Icons from "@/components/icons"
+import { Icons } from "@/components/icons"
 
 export function Banner() {
   return (
@@ -45,7 +45,7 @@ export function Banner() {
         >
           Register now{" "}
           <span aria-hidden="true">
-            <Icons name="arrow-right" className="inline-block h-5" />
+            <Icons.arrowRight className="inline-block h-5" />
           </span>
         </a>
       </div>
@@ -55,11 +55,7 @@ export function Banner() {
           className="-m-3 p-3 focus-visible:outline-offset-[-4px]"
         >
           <span className="sr-only">Dismiss</span>
-          <Icons
-            name="x"
-            className="h-5 w-5 text-gray-900"
-            aria-hidden="true"
-          />
+          <Icons.close className="h-5 w-5 text-gray-900" aria-hidden="true" />
         </button>
       </div>
     </div>

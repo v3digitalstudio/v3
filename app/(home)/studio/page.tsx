@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 
-import Icons from "@/components/icons"
+import { Icons } from "@/components/icons"
 import { ManSitting, WorkAtHome } from "@/components/svg"
 
 export const metadata: Metadata = {
@@ -46,7 +46,7 @@ export default function Studio() {
         >
           <span className="mr-2">Get in touch</span>
           <span className="transition duration-100 group-hover:-rotate-45">
-            <Icons name="arrow-right" className="h-5 w-5" />
+            <Icons.arrowRight className="h-5 w-5" />
           </span>
         </Link>
         {/* <h2 className="mt-10 font-heading text-3xl leading-[1.1] md:text-4xl">
