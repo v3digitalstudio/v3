@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-// import { AnimatedGradientBorderTW } from "@/components/animated-border"
+// import { HeroVid } from "@/components/hero-vid"
 import { Icons } from "@/components/icons"
 import { MorphBg } from "@/components/morph-bg"
 import { Newsletter } from "@/components/newsletter"

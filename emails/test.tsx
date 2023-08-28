@@ -63,7 +63,8 @@ export const Test = ({
               />
             </Section> */}
             <Heading className="mx-0 my-[30px] p-0 text-center text-[24px] font-normal text-black">
-              Join <strong>{teamName}</strong> on <strong>Vercel</strong>
+              Join <strong>{teamName}</strong> on{" "}
+              <strong>V3 Digital Studio</strong>
             </Heading>
             <Text className="text-[14px] leading-[24px] text-black">
               Hello {username},

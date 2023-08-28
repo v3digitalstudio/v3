@@ -13,10 +13,10 @@ export default function Studio() {
   return (
     <section className="container py-12 md:py-24">
       <div className="mx-auto mb-20 max-w-5xl px-8 text-start">
-        <h2 className="font-heading text-4xl leading-[1.1] md:text-6xl">
+        <h2 className="font-heading text-4xl leading-[1.1] lg:text-6xl">
           The Studio
         </h2>
-        <p className="mb-10 font-heading text-2xl italic underline decoration-blue-500 decoration-double dark:text-white md:my-5">
+        <p className="mb-10 font-heading text-lg italic underline decoration-blue-500 decoration-double dark:text-white md:my-5 lg:text-2xl">
           Digital for Thought
         </p>
         <div className="my-10 flex justify-center md:justify-end">

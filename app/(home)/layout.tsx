@@ -15,7 +15,7 @@ export default async function HomeLayout({ children }: HomeLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
       {/* <Banner /> */}
-      <header className="container z-40">
+      <header className="container">
         <div className="flex h-20 items-center justify-between py-6">
           <MainNav items={homeConfig.mainNav} />
           <nav>

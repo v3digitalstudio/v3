@@ -11,8 +11,8 @@ export async function GET(request: Request) {
     await resend.sendEmail({
       // from: process.env.MAIL_FROM || "",
       // to: email,
-      from: "onboarding@resend.dev",
-      to: "frankie@v3digital.studio",
+      from: "",
+      to: "",
       subject: "Test email from V3 Digital Studio",
       react: ContactEmail(),
     })
