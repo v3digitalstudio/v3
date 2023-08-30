@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { Client, LogLevel } from "@notionhq/client"
 
 const notion = new Client({
-  auth: `${process.env.NOTION_API_KEY}`,
+  auth: process.env.NOTION_TOKEN,
   logLevel: LogLevel.DEBUG,
 })
 
@@ -95,9 +95,9 @@ export async function POST(request: NextRequest) {
         status: 200,
       }
     )
-  } catch (e: unknown) {
-    if (e instanceof Error) {
-      console.log(`Failed to POST to Notion: ${e.message}`)
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.log(`Failed to POST to Notion: ${error.message}`)
     }
     return NextResponse.json(
       {
