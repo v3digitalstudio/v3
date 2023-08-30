@@ -1,11 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { useRouter } from "next/navigation"
+import { formSchema, formValues } from "@/schemas/form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { format } from "date-fns"
 import { useForm } from "react-hook-form"
-import * as z from "zod"
 
 import { cn } from "@/lib/utils"
 import { Button, buttonVariants } from "@/components/ui/button"
@@ -26,55 +25,26 @@ import {
 import { toast } from "@/components/ui/use-toast"
 import { Icons } from "@/components/icons"
 
-const FormSchema = z.object({
-  name: z.any({
-    required_error: "Your full name is required.",
-  }),
-  company: z.any({
-    required_error: "Your company name is required.",
-  }),
-  email: z.any({
-    required_error: "Your email is required.",
-  }),
-  startDate: z.any({
-    required_error: "A date of birth is required.",
-  }),
-  work: z.any({
-    required_error: "Please select a service.",
-  }),
-  budget: z.any({
-    required_error: "Please select a budget.",
-  }),
-  survey: z.any({
-    required_error: "Please select an option.",
-  }),
-  details: z.any({
-    required_error: "Please provide some additional details.",
-  }),
-  newsletter: z.any({
-    required_error: "",
-  }),
-})
-
 export function ContactForm() {
-  const router = useRouter()
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+  const form = useForm<formValues>({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      company: "",
+      email: "",
+      details: "",
+      work: "select",
+      budget: "select",
+      survey: "select",
+      newsletter: false,
     },
   })
   const [isSaving, setIsSaving] = React.useState<boolean>(false)
-  const [checked, setChecked] = React.useState<boolean>(false)
 
-  const handleChange = () => {
-    setChecked(!checked)
-  }
-
-  async function onSubmit(data: z.infer<typeof FormSchema>) {
+  async function onSubmit(data: formValues) {
     setIsSaving(true)
 
-    const response = await fetch(`http://localhost:3001/api/notion/route`, {
+    const response = await fetch(`/api/notion`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -91,6 +61,7 @@ export function ContactForm() {
         newsletter: data.newsletter,
       }),
     })
+    console.log(data)
 
     setIsSaving(false)
 
@@ -105,35 +76,6 @@ export function ContactForm() {
       title: "Submitted!",
       description: "We'll reach out shortly.",
     })
-
-    router.refresh()
-  }
-
-  // function onSubmit(data: z.infer<typeof FormSchema>) {
-  //   toast({
-  //     title: "Submitted!",
-  //     description: "We'll be in touch shortly."
-  //     (
-  //       <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-  //         <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-  //       </pre>
-  //     ),
-  //   })
-  // }
-
-  {
-    /* <Button
-      className="mt-4"
-      variant="default"
-      onClick={() => {
-        toast({
-          title: "Submitted!",
-          description: "We'll be in touch shortly.",
-        })
-      }}
-    >
-      Submit
-    </Button> */
   }
 
   return (
@@ -145,7 +87,7 @@ export function ContactForm() {
         <FormField
           control={form.control}
           name="name"
-          render={() => (
+          render={({ field }) => (
             <FormItem className="mt-2 flex flex-col">
               <FormControl>
                 <label>
@@ -153,9 +95,9 @@ export function ContactForm() {
                     Full name
                   </span>
                   <input
-                    type="text"
                     className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm  focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
                     placeholder="Your full name"
+                    {...field}
                   />
                 </label>
               </FormControl>
@@ -166,7 +108,7 @@ export function ContactForm() {
         <FormField
           control={form.control}
           name="company"
-          render={() => (
+          render={({ field }) => (
             <FormItem className="flex flex-col">
               <FormControl>
                 <label>
@@ -174,9 +116,9 @@ export function ContactForm() {
                     Company
                   </span>
                   <input
-                    type="text"
                     className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm  focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
                     placeholder="Your company name"
+                    {...field}
                   />
                 </label>
               </FormControl>
@@ -187,7 +129,7 @@ export function ContactForm() {
         <FormField
           control={form.control}
           name="email"
-          render={() => (
+          render={({ field }) => (
             <FormItem className="flex flex-col">
               <FormControl>
                 <label>
@@ -195,9 +137,9 @@ export function ContactForm() {
                     Email address
                   </span>
                   <input
-                    type="email"
                     className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm  focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
                     placeholder="john@example.com"
+                    {...field}
                   />
                 </label>
               </FormControl>
@@ -253,24 +195,31 @@ export function ContactForm() {
         <FormField
           control={form.control}
           name="work"
-          render={() => (
+          render={({ field }) => (
             <FormItem className="mt-2 flex flex-col">
               <label className="block">
                 <span className="text-gray-700 dark:text-muted-foreground">
                   What type of work?
                 </span>
                 <select
-                  name="selectedProject"
                   className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
+                  {...field}
                 >
-                  <option>Development</option>
-                  <option>Design + Development</option>
-                  <option>Self hosted solutions</option>
-                  <option>Framer</option>
-                  <option>Super.so</option>
-                  <option>Documentation</option>
-                  <option>Content Management</option>
-                  <option>Other</option>
+                  <option value="select" disabled hidden>
+                    Select
+                  </option>
+                  <option value="Development">Development</option>
+                  <option value="Design + Development">
+                    Design + Development
+                  </option>
+                  <option value="Self hosted solutions">
+                    Self hosted solutions
+                  </option>
+                  <option value="Framer">Framer</option>
+                  <option value="Super.so">Super.so</option>
+                  <option value="Documentation">Documentation</option>
+                  <option value="Content Management">Content Management</option>
+                  <option value="Other">Other</option>
                 </select>
               </label>
               <FormDescription>
@@ -284,23 +233,25 @@ export function ContactForm() {
         <FormField
           control={form.control}
           name="budget"
-          render={() => (
+          render={({ field }) => (
             <FormItem className="mt-2 flex flex-col">
               <label className="block">
                 <span className="text-gray-700 dark:text-muted-foreground">
                   Estimated budget?
                 </span>
                 <select
-                  name="selectedBudget"
-                  defaultValue="3"
                   className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
+                  {...field}
                 >
-                  <option value="1">$5,000-$8,000</option>
-                  <option value="2">$8,000-$15,000</option>
-                  <option value="3">$15,000-$30,000</option>
-                  <option value="4">$30,000-$45,000</option>
-                  <option value="5">$45,000-$65,000</option>
-                  <option value="6">$65,000+</option>
+                  <option value="select" disabled hidden>
+                    Select
+                  </option>
+                  <option value="$5000-$8000">$5,000-$8,000</option>
+                  <option value="$8000-$15000">$8,000-$15,000</option>
+                  <option value="$15000-$30000">$15,000-$30,000</option>
+                  <option value="$30000-$45000">$30,000-$45,000</option>
+                  <option value="$45000-$65000">$45,000-$65,000</option>
+                  <option value="$65000+">$65,000+</option>
                 </select>
               </label>
               <FormMessage />
@@ -310,24 +261,26 @@ export function ContactForm() {
         <FormField
           control={form.control}
           name="survey"
-          render={() => (
+          render={({ field }) => (
             <FormItem className="mt-2 flex flex-col">
               <label className="block">
                 <span className="text-gray-700 dark:text-muted-foreground">
                   How did you hear about us?
                 </span>
                 <select
-                  name="selectedSurvey"
-                  defaultValue="3"
                   className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
+                  {...field}
                 >
-                  <option value="1">Articles</option>
-                  <option value="2">Colleague</option>
-                  <option value="3">Newsletter</option>
-                  <option value="4">Former Client</option>
-                  <option value="5">LinkedIn</option>
-                  <option value="6">Twitter (X)</option>
-                  <option value="7">Other</option>
+                  <option value="select" disabled hidden>
+                    Select
+                  </option>
+                  <option value="Articles">Articles</option>
+                  <option value="Colleague">Colleague</option>
+                  <option value="Newsletter">Newsletter</option>
+                  <option value="Former Client">Former Client</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="X (Twitter)">X (Twitter)</option>
+                  <option value="Other">Other</option>
                 </select>
               </label>
               <FormDescription>
@@ -341,7 +294,7 @@ export function ContactForm() {
         <FormField
           control={form.control}
           name="details"
-          render={() => (
+          render={({ field }) => (
             <FormItem className="mt-2 flex flex-col">
               <label className="block">
                 <span className="text-gray-700 dark:text-muted-foreground">
@@ -350,6 +303,7 @@ export function ContactForm() {
                 <textarea
                   className="mt-2 block w-full rounded-lg border-gray-300 p-2 shadow-sm  focus:border-indigo-300 focus:ring focus:ring-indigo-200 dark:bg-inherit"
                   rows={3}
+                  {...field}
                 />
               </label>
               <FormDescription>
@@ -363,14 +317,14 @@ export function ContactForm() {
         <FormField
           control={form.control}
           name="newsletter"
-          render={() => (
+          render={({ field }) => (
             <FormItem className="mt-2 flex flex-col">
               <label className="inline-flex items-center">
                 <input
                   type="checkbox"
                   className="mr-3 rounded border-gray-300 shadow-sm"
-                  checked={checked}
-                  onChange={handleChange}
+                  checked={field.value}
+                  onChange={field.onChange}
                 />
                 <span className="w-44 text-xs md:w-full md:text-base">
                   Sign me up for updates from V3 Digital Studio

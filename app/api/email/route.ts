@@ -1,20 +1,18 @@
 import { NextResponse } from "next/server"
-import ContactEmail from "@/emails/contact"
+import V3WelcomeEmail from "@/emails/welcome"
 import { Resend } from "resend"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-export async function GET(request: Request) {
-  // const { firstName, email } = await request.json()
+export async function POST(request: Request) {
+  const { email } = await request.json()
 
   try {
     await resend.sendEmail({
-      // from: process.env.MAIL_FROM || "",
-      // to: email,
-      from: "",
-      to: "",
-      subject: "Test email from V3 Digital Studio",
-      react: ContactEmail(),
+      from: process.env.MAIL_FROM || "",
+      to: email,
+      subject: "Welcome - V3 Digital Studio",
+      react: V3WelcomeEmail({ email }),
     })
     return NextResponse.json(
       {

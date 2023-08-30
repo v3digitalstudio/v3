@@ -1,8 +1,22 @@
 import type { Metadata } from "next"
+// import Image from "next/image"
 import Link from "next/link"
+import AstroGloss from "@/public/images/partners/astro-gloss.svg"
+import FigmaGloss from "@/public/images/partners/figma-gloss.svg"
+import FramerGloss from "@/public/images/partners/framer-gloss.svg"
+import NextjsGloss from "@/public/images/partners/nextjs-gloss.svg"
+import PayloadGloss from "@/public/images/partners/payload-gloss.svg"
+import PlanetScaleGloss from "@/public/images/partners/planetscale-gloss.svg"
+import RailwayGloss from "@/public/images/partners/railway-gloss.svg"
+import ReactGloss from "@/public/images/partners/react-gloss.svg"
+import SanityGloss from "@/public/images/partners/sanity-gloss.svg"
+import SuperGloss from "@/public/images/partners/super-gloss.svg"
+import TailwindGloss from "@/public/images/partners/tailwind-gloss.svg"
+import VercelGloss from "@/public/images/partners/vercel-gloss.svg"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+// import { AnimatedGradientBorderTW } from "@/components/animated-border"
 // import { HeroVid } from "@/components/hero-vid"
 import { Icons } from "@/components/icons"
 import { MorphBg } from "@/components/morph-bg"
@@ -10,9 +24,9 @@ import { Newsletter } from "@/components/newsletter"
 import { HumanSitting } from "@/components/svg"
 
 // import { env } from '@/env.mjs'
-// import Image from "next/image"
 // import { siteConfig } from "@/config/site"
 // import WebVitals from "@/components/web-vitals"
+
 // import { CookieConsent } from "@/components/cookie"
 
 export const metadata: Metadata = {
@@ -27,12 +41,12 @@ export default async function IndexPage() {
         <MorphBg />
         <div className="container flex flex-col items-center gap-4 md:items-end">
           <HumanSitting />
-          <p className="max-w-[26rem] text-center md:max-w-[30rem] md:text-end lg:max-w-[34rem] lg:text-lg">
+          <p className="max-w-[26rem] text-center dark:text-muted-foreground md:max-w-[30rem] md:text-end lg:max-w-[34rem] lg:text-lg">
             V3 Digital Studio is a modern web development and design agency
             based in the Sierra Nevadas
             <Icons.mountain className="inline-flex h-6 fill-zinc-300 pb-1.5 pl-1 dark:fill-zinc-800" />
           </p>
-          <div className="flex flex-col md:flex-row">
+          <div className="mb-24 flex flex-col md:flex-row">
             <Link
               href="/studio"
               className={cn(buttonVariants({ variant: "dark", size: "lg" }))}
@@ -55,16 +69,17 @@ export default async function IndexPage() {
       </section>
       <section
         id="expertise"
-        className="container space-y-16 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
+        className="container space-y-16 bg-indigo-400 py-8 shadow-sm dark:bg-inherit md:py-12 lg:py-24"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6 text-center">
-          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
+          <h2 className="font-heading text-3xl leading-[1.1] text-white sm:text-3xl md:text-5xl">
             Expertise
           </h2>
-          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+          <p className="max-w-[85%] leading-normal text-white sm:text-lg sm:leading-7">
             V3 creates exceptional web experiences. From pixel perfect design
-            details, to the latest offerings in web technologies, we build sites
-            that are fast, secure, and efficient.
+            details, to utilizing the latest offerings in web technologies. We
+            build sites that are <i>fast</i>, <i>secure</i>, <i></i>and
+            efficient.
           </p>
         </div>
         <div className="mx-auto grid justify-center gap-4  sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
@@ -117,21 +132,22 @@ export default async function IndexPage() {
             </div>
           </div>
         </div>
+        <hr className="mt-24 hidden dark:flex" />
       </section>
       <section
         id="partners"
-        className="container mt-10 rounded-xl bg-indigo-400 py-8 shadow-lg md:py-12"
+        className="container mt-10 rounded-xl bg-slate-100 py-8 shadow-lg dark:bg-inherit md:py-12"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6">
-          <h2 className="font-heading text-3xl leading-[1.1] text-white sm:text-3xl md:text-5xl">
+          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
             Ideal Partners
           </h2>
-          <p className="max-w-[85%] text-center leading-normal text-white sm:text-lg sm:leading-7">
+          <p className="max-w-[85%] text-center leading-normal text-black dark:text-muted-foreground sm:text-lg sm:leading-7">
             V3 creates exceptional web experiences. From pixel perfect design
             details, to the latest offerings in web technologies, we build sites
             that are fast, secure, and efficient.
           </p>
-          <div className="mx-auto grid justify-center gap-4  sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
+          <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
             <div className="relative overflow-hidden rounded-lg border bg-background p-2">
               <div className="flex h-[190px] flex-col justify-between rounded-md p-5">
                 <Icons.keyboard className="h-7 w-7 md:h-12 md:w-12" />
@@ -182,43 +198,97 @@ export default async function IndexPage() {
             </div>
           </div>
         </div>
-        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2"></div>
+        {/* <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2"></div> */}
+        <hr className="mt-24 hidden dark:flex" />
       </section>
       <section
         id="solutions"
-        className="container mt-10 rounded-xl bg-gray-400 py-8 shadow-lg md:py-12"
+        className="container mt-10 rounded-xl bg-slate-100 py-8 shadow-lg dark:bg-inherit md:py-12"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6 text-center">
-          <h2 className="font-heading text-3xl leading-[1.1] text-white sm:text-3xl md:text-5xl ">
+          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl ">
             Solutions
           </h2>
           {/* <div className="mx-auto grid grid-cols-1 justify-center gap-4 md:max-w-[64rem] md:grid-cols-2">
             <AnimatedGradientBorderTW>
-              <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-                <Icons.hardDrive className="h-7 w-7 md:h-12 md:w-12" />
-                <div className="space-y-1">
-                  <h3 className="font-bold">Small footprint</h3>
-                  <p className="text-sm text-muted-foreground">
-                    We build apps that are efficiently small and fast. No bloat.
-                    Eco-concious.
-                  </p>
-                </div>
-              </div>
+              <WebVitals />
             </AnimatedGradientBorderTW>
           </div> */}
         </div>
+        <hr className="mt-24 hidden dark:flex" />
       </section>
       <section
         id="tech"
-        className="container mt-10 rounded-xl bg-red-400 py-8 shadow-lg md:py-12"
+        className="container mt-10 rounded-xl bg-slate-100 py-8 shadow-lg dark:bg-inherit md:py-12"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6 text-center">
-          <h2 className="max-w-md font-heading text-3xl leading-[1.1] text-white sm:text-3xl md:text-5xl ">
+          <h2 className="mb-10 max-w-md font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
             Trusted Software Providers
           </h2>
-          <div className="mx-auto grid grid-cols-1 justify-center gap-4 md:max-w-[64rem] md:grid-cols-2"></div>
+
+          <div className="mx-auto grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://nextjs.org">
+                <NextjsGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://vercel.com">
+                <VercelGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://astro.build">
+                <AstroGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://tailwindcss.com">
+                <TailwindGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://sanity.io">
+                <SanityGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://payloadcms.com">
+                <PayloadGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://figma.com">
+                <FigmaGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://planetscale.com">
+                <PlanetScaleGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://react.dev">
+                <ReactGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://framer.com">
+                <FramerGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://super.so">
+                <SuperGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+            <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <Link href="https://railway.app">
+                <RailwayGloss className="h-44 w-44 md:h-48 md:w-48" />
+              </Link>
+            </div>
+          </div>
         </div>
-        {/* <WebVitals /> */}
       </section>
       <section id="newsletter" className="container px-0 py-8 md:py-12">
         <Newsletter />

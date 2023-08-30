@@ -210,7 +210,7 @@ export default function PricingPage() {
                 buttonVariants({ variant: "elevated", size: "lg" })
               )}
             >
-              Get Started
+              Contact
             </Link>
           </div>
         </div>
