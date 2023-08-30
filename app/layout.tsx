@@ -42,7 +42,7 @@ export const metadata = {
   authors: [
     {
       name: "v3digitalstudio",
-      url: "https://v3digital.studio",
+      url: "https://www.v3digital.studio",
     },
   ],
   creator: "v3digitalstudio",

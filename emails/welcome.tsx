@@ -44,7 +44,7 @@ export const V3WelcomeEmail = ({ email }: V3WelcomeEmailProps) => (
             pX={12}
             pY={12}
             style={button}
-            href="https://v3digital.studio/contact"
+            href="https://www.v3digital.studio/contact"
           >
             Let&apos;s Work Together!
           </Button>

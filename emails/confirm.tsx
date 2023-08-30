@@ -43,7 +43,7 @@ export const V3ConfirmEmail = ({ email }: V3ConfirmEmailProps) => (
             pX={12}
             pY={12}
             style={button}
-            href="https://v3digital.studio/contact"
+            href="https://www.v3digital.studio/contact"
           >
             Let&apos;s Work Together!
           </Button>
