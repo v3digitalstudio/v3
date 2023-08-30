@@ -48,7 +48,6 @@ export function ContactForm() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + process.env.NOTION_TOKEN,
       },
       body: JSON.stringify({
         name: data.name,
