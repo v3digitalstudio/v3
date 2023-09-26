@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import OfficeDesk from "@/public/images/home/desk.svg"
 
 import { Icons } from "@/components/icons"
-import { ManSitting, WorkAtHome } from "@/components/svg"
 
 export const metadata: Metadata = {
   title: "Studio",
@@ -20,7 +20,7 @@ export default function Studio() {
           Digital for Thought
         </p>
         <div className="my-10 flex justify-center md:justify-end">
-          <ManSitting />
+          <OfficeDesk />
         </div>
         <p className="mb-10 text-lg tracking-tight">
           V3 Digital Studio is a web development and design studio that delivers

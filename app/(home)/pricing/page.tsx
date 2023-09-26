@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 
+// import Investment from "@/public/images/home/investment.svg"
+
 import { cn } from "@/lib/utils"
 import {
   Accordion,
@@ -60,7 +62,9 @@ export default function PricingPage() {
           </div>
           <div className="flex flex-col gap-10 text-center">
             <div>
-              <h4 className="text-5xl font-bold tracking-tighter">$5999</h4>
+              <h4 className="text-3xl font-bold tracking-tighter md:text-5xl">
+                $5999
+              </h4>
               <p className="text-end text-sm font-bold text-muted-foreground">
                 per month
               </p>
@@ -113,7 +117,9 @@ export default function PricingPage() {
           </div>
           <div className="flex flex-col gap-10 text-center">
             <div>
-              <h4 className="text-5xl font-bold tracking-tighter">$12,999</h4>
+              <h4 className="text-3xl font-bold tracking-tighter md:text-5xl">
+                $12,999
+              </h4>
               <p className="text-end text-sm font-bold text-muted-foreground">
                 per month
               </p>
@@ -202,7 +208,9 @@ export default function PricingPage() {
           </div>
           <div className="flex flex-col gap-12 text-center">
             <div>
-              <h4 className="text-4xl font-bold tracking-tight">Custom</h4>
+              <h4 className="text-3xl font-bold tracking-tight md:text-5xl">
+                Custom
+              </h4>
             </div>
             <Link
               href="/contact"
@@ -220,18 +228,20 @@ export default function PricingPage() {
         >
           <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6">
             <span className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium">
-              Add on
+              Builder
             </span>
             <h2 className="text-3xl font-bold leading-[1.1] text-white sm:text-3xl md:text-4xl ">
-              Framer site
+              Framer
             </h2>
 
-            <span className="text-2xl font-bold leading-[1.1] text-white dark:text-gray-400 sm:text-2xl md:text-3xl">
-              $2099
-            </span>
-            <p className="text-start text-white">
-              Get a great site faster with Framer. Ideal for small sites, blogs,
-              restaurants, real estate agents, and more.
+            <h4 className="text-2xl font-bold leading-[1.1] text-white dark:text-gray-400 sm:text-2xl md:text-3xl">
+              $2099{" "}
+              <span className="text-sm font-bold text-white">per month</span>
+            </h4>
+            <p className="text-center text-white">
+              Get a great site faster with Framer.
+              <br /> Ideal for small sites, blogs, restaurants, real estate
+              agents, and more.
             </p>
           </div>
         </section>
@@ -241,17 +251,18 @@ export default function PricingPage() {
         >
           <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6">
             <span className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium">
-              Add on
+              Builder
             </span>
             <h2 className="text-3xl font-bold leading-[1.1] text-white sm:text-3xl md:text-4xl ">
-              Super.so site
+              Super.so
             </h2>
-            <span className="text-2xl font-bold leading-[1.1] text-white dark:text-gray-400 sm:text-2xl md:text-3xl">
-              $1499
-            </span>
-            <p className="text-start text-white">
-              Using Notion? Manage your site with your own workspace. Thats
-              where Super comes in.
+            <h4 className="text-2xl font-bold leading-[1.1] text-white dark:text-gray-400 sm:text-2xl md:text-3xl">
+              $1499{" "}
+              <span className="text-sm font-bold text-white">per month</span>
+            </h4>
+            <p className="text-center text-white">
+              Using Notion? Integrate your site with your own workspace. <br />
+              Thats where Super comes in.
             </p>
           </div>
         </section>
@@ -280,40 +291,120 @@ export default function PricingPage() {
         <div className="rounded-lg p-10">
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionTrigger>
+                How does it work once you subscribe?
+              </AccordionTrigger>
               <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
+                The first thing we&apos;ll do on every plan is identify where
+                your application is causing you pain and why. To do this,
+                we&apos;ll talk to you and your team and review your code and
+                designs to get a clear understanding of what&apos;s going wrong,
+                where you can improve and which things are most likely to have
+                the biggest impact. Then we&apos;ll advise you on how best to
+                achieve that. If you&apos;re on one of our recurring plans,
+                we&apos;ll then provide monthly support to help you start making
+                these improvements. How this looks can be different from project
+                to project. Using our recommendations above, and taking into
+                account any features you&apos;d like to add, we&apos;ll create a
+                list of requests and work through them one at a time. We&apos;ll
+                always advise you on where we will be most valuable to make sure
+                you&apos;re making the most important improvements first.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionTrigger>
+                Why not just hire a developer/designer?
+              </AccordionTrigger>
               <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
+                Good question! A full-time senior developer costs over $150,000
+                and a full-time senior designer costs over $100,000, and
+                that&apos;s excluding project management and employee benefits.
+                By working with us you get access to our team of designers and
+                developers for the price of hiring just one. If you don&apos;t
+                have enough work to keep a designer and a developer busy in a
+                full time role, you&apos;ll be paying for people you don&apos;t
+                need. But with our service, we can adjust our workflow to make
+                sure you&apos;re getting exactly what you need on a
+                month-by-month basis, whether that&apos;s 50/50 or a different
+                split. Furthermore, you&apos;ll get access to our entire team.
+                That means that you get the benefits of having specialists being
+                able to focus on providing the best solution for you, not just a
+                single person you&apos;ve happened to hire. As we continue to
+                grow, you&apos;ll get even better access to specialists for the
+                same price. And if you&apos;re on our monthly plan, you can
+                pause and resume your subscription at any time, ensuring you
+                only pay when you have work.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionTrigger>How do I make requests?</AccordionTrigger>
               <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
+                We&apos;re pretty flexible on how we accept requests. We manage
+                our requests in linear so if you&apos;re comfortable you can add
+                them there, otherwise you can send us however you might be
+                comfortable, like github, notion or google sheets.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
+              <AccordionTrigger>Is there a limit to requests?</AccordionTrigger>
               <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
+                Once you&apos;re subscribed you can make as many requests as
+                you&apos;d like, which we&apos;ll work on one-by-one. We&apos;ll
+                help provide the initial list of recommended work but you can
+                always choose what you think is most important to prioritise
+                next.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger>
+                What if I need to make more changes at one time?
+              </AccordionTrigger>
+              <AccordionContent>
+                If you need to be able to make multiple changes at once,
+                you&apos;ll probably benefit from our custom solution more.
+                We&apos;ll always take into account your needs and advise you on
+                which solution is best for you before we start working together.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-6">
+              <AccordionTrigger>Does V3 offer refunds?</AccordionTrigger>
+              <AccordionContent>
+                Due to the highly custom nature of our solutions we do not offer
+                a refund policy. If you are on our monthly plan you can cancel
+                your subscription at any time. If you are on our longer plans,
+                we offer a 3 month trial period, where if you are unhappy with
+                our service we will downgrade your plan to a monthly
+                subscription and refund you for any unused months.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
 
-        <div className="mx-auto flex w-full justify-center gap-4">
+        <div className="mx-auto flex w-full flex-col justify-center gap-4">
           <h2 className="mt-10 text-center font-heading text-3xl">
-            Anything we missed?
+            Anything we missed? <br />
+            Need a custom project?
           </h2>
         </div>
         <div className="mx-auto flex w-full justify-center rounded-lg bg-gray-200 p-10 dark:bg-inherit">
           <CalEmbed />
         </div>
+        {/* <hr />
+        <p className="text-start text-sm">Why charge for the call?</p>
+        <span className="text-xs">
+          Custom work takes time and heavy evaluation to determine what will be
+          the best route for your project. For that time we will go complete a
+          detailed overview.{" "}
+          <strong>
+            When you decide to subscribe the cost of the call will go toward
+            your first month.
+          </strong>
+        </span> */}
+        {/* <div className="relative">
+          <div className="absolute -bottom-12 right-[-37rem]">
+            <Investment />
+          </div>
+        </div> */}
       </div>
     </section>
   )

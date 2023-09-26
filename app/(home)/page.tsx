@@ -16,6 +16,7 @@ import VercelGloss from "@/public/images/partners/vercel-gloss.svg"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { Feature } from "@/components/feature"
 // import { AnimatedGradientBorderTW } from "@/components/animated-border"
 // import { HeroVid } from "@/components/hero-vid"
 import { Icons } from "@/components/icons"
@@ -41,6 +42,7 @@ export default async function IndexPage() {
         <MorphBg />
         <div className="container flex flex-col items-center gap-4 md:items-end">
           <HumanSitting />
+          {/* <Hero className="ml-10 h-[95%] w-[95%] fill-current md:ml-0 md:h-[65%] md:w-[65%]" /> */}
           <p className="max-w-[26rem] text-center dark:text-muted-foreground md:max-w-[30rem] md:text-end lg:max-w-[34rem] lg:text-lg">
             V3 Digital Studio is a modern web development and design agency
             based in the Sierra Nevadas
@@ -82,7 +84,8 @@ export default async function IndexPage() {
             efficient.
           </p>
         </div>
-        <div className="mx-auto grid justify-center gap-4  sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
+        <Feature />
+        {/* <div className="mx-auto grid justify-center gap-4  sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
           <div className="relative overflow-hidden rounded-lg border bg-background p-2">
             <div className="flex h-[190px] flex-col justify-between rounded-md p-6">
               <Icons.keyboard className="h-7 w-7 md:h-12 md:w-12" />
@@ -131,7 +134,7 @@ export default async function IndexPage() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <hr className="mt-24 hidden dark:flex" />
       </section>
       <section

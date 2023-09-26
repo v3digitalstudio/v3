@@ -29,9 +29,7 @@ export const formSchema = z.object({
       message: "Company must be at least 2 characters.",
     })
     .max(50, { message: "Company must be less than 50 characters." }),
-  email: z.string().email({
-    message: "Invalid email. Please enter a valid email address",
-  }),
+  email: z.string().email({ message: "Invalid email address" }),
   startDate: z
     .date({
       required_error: "A start date is required.",

@@ -4,7 +4,7 @@ const { withContentlayer } = require("next-contentlayer")
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: [""],
+    domains: ["tailwindui.com"],
   },
   redirects() {
     try {

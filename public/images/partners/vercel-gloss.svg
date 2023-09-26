@@ -28,7 +28,7 @@
 </g>
 </g>
 <g clip-path="url(#clip0_307_309)">
-<path d="M225 464L373 214L521 464H225Z" fill="#D9D9D9"/>
+<path d="M225 464L373 214L521 464H225Z" fill="#fff"/>
 </g>
 <g filter="url(#filter3_f_307_309)">
 <path d="M57.0001 251.626C57.0001 181.392 57.0001 146.274 70.89 119.975C83.0997 96.8569 102.525 78.3588 126.212 67.2937C153.159 54.706 188.235 56.4225 258.385 59.8556L363.287 64.9895L471.719 59.7416C541.837 56.348 576.896 54.6512 603.829 67.2448C627.504 78.315 646.918 96.8118 659.119 119.924C673 146.216 673 181.317 673 251.517V467C673 534.206 673 567.809 659.921 593.479C648.416 616.058 630.058 634.416 607.479 645.921C581.81 659 548.206 659 481 659H249C181.794 659 148.191 659 122.521 645.921C99.9418 634.416 81.5841 616.058 70.0793 593.479C57.0001 567.809 57.0001 534.206 57.0001 467V251.626Z" fill="url(#paint7_radial_307_309)"/>
@@ -172,9 +172,9 @@
 <stop offset="1" stop-color="white" stop-opacity="0"/>
 </radialGradient>
 <linearGradient id="paint13_linear_307_309" x1="611.147" y1="60.4063" x2="663.838" y2="108.385" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9" stop-opacity="0.11"/>
-<stop offset="0.515661" stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
+<stop stop-color="#fff" stop-opacity="0.11"/>
+<stop offset="0.515661" stop-color="#fff"/>
+<stop offset="1" stop-color="#fff" stop-opacity="0"/>
 </linearGradient>
 <clipPath id="clip0_307_309">
 <rect width="296" height="250" fill="white" transform="translate(225 214)"/>

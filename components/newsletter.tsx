@@ -64,7 +64,7 @@ export function Newsletter() {
 
             <Form {...form}>
               <form
-                className="flex flex-wrap gap-x-4 space-y-1.5"
+                className="gap-x-4 space-y-1.5"
                 onSubmit={form.handleSubmit(onSubmit)}
               >
                 <FormField
@@ -72,9 +72,7 @@ export function Newsletter() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <label htmlFor="email" className="sr-only">
-                        Email address
-                      </label>
+                      <label className="sr-only">Email address</label>
                       <FormControl>
                         <input
                           className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-2.5 py-2 text-sm text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-white focus:ring-2 focus:ring-inset focus:ring-zinc-200 md:text-base"
@@ -110,8 +108,10 @@ export function Newsletter() {
                 Every now and then articles
               </dt>
               <dd className="mt-2 leading-7 text-white">
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure
-                cupidatat duis commodo amet.
+                V3 provides updates on our most significant news, changes, and
+                fixes. Updates are provided on a now and then basis and
+                won&apos;t be sent unless we know that they will be valuable to
+                our subscribers.
               </dd>
             </div>
             <div className="flex flex-col items-start">
@@ -123,8 +123,8 @@ export function Newsletter() {
               </div>
               <dt className="mt-4 font-semibold text-white">No spam</dt>
               <dd className="mt-2 leading-7 text-white">
-                Officia excepteur ullamco ut sint duis proident non adipisicing.
-                Voluptate incididunt anim.
+                This speaks for itself. V3&apos;s updates don&apos;t wish to be
+                another &quot;move to spam&quot; rule in your inbox.
               </dd>
             </div>
           </dl>
